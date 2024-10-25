@@ -55,5 +55,5 @@ if ($xml->asXML($xml_file_name)) {
 ?>
 
 <!-- Redirigir a la página de inicio después de 5 segundos -->
-<meta http-equiv='Refresh' content="2; url='index.php'" />
+<meta http-equiv='Refresh' content="1; url='index.php'" />
 
