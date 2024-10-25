@@ -350,14 +350,16 @@
             </div>
     
             <form action="submit.php" method="post" class="contact-form" id="contactUs-Form">
-                <input type="text" name="name" class="box" id="name" placeholder="Nombre" required maxlength="30" />
-                <input type="email" name="email" class="box" id="email" placeholder="Email" required maxlength="50" />
-                <input type="text" name="subject" class="box" id="subject" placeholder="Asunto" required maxlength="50" />
-                <textarea cols="30" rows="10" name="comment" id="comment" class="box" placeholder="Mensaje" required maxlength="400"></textarea>
+                    
+                <input type="text" name="name" class="box" id="name" placeholder="Nombre" required />
+                <input type="email" name="email" class="box" id="email" placeholder="Email" required />
+                <input type="text" name="subject" class="box" id="subject" placeholder="Asunto" required />
+                <textarea cols="30" rows="10" name="comment" id="comment" class="box" placeholder="Mensaje"></textarea>
                 <button type="submit" class="btn" name="submit" id="submit">Enviar</button>
-    
-    <span class="alert" id="msg"></span>
-</form>
+                
+                <span class="alert" id="msg"></span>
+                
+            </form>
             
         </div>
 
@@ -516,69 +518,3 @@
             });
         }
     </script>
-    <?php
-
-function guardarMensajeEnXML($nombre, $email, $asunto, $comentario) {
-    // Define la ruta del archivo XML
-    $xmlFile = 'mensajes.xml';
-
-    // Carga el archivo XML o crea uno nuevo si no existe
-    if (file_exists($xmlFile)) {
-        $xml = simplexml_load_file($xmlFile);
-    } else {
-        // Crea un nuevo archivo XML
-        $xml = new SimpleXMLElement('<?xml version="1.0"?><mensajes></mensajes>');
-    }
-
-    // Obtiene el último ID y añade uno para el nuevo mensaje
-    $ultimoId = count($xml->mensaje);
-    $nuevoId = $ultimoId + 1;
-
-    // Crea un nuevo nodo de mensaje
-    $mensaje = $xml->addChild('mensaje');
-    $mensaje->addChild('id', $nuevoId);
-    $mensaje->addChild('fecha', date('Y-m-d')); // Fecha actual en formato YYYY-MM-DD
-    $mensaje->addChild('nombre', htmlspecialchars($nombre));
-    $mensaje->addChild('email', htmlspecialchars($email));
-    $mensaje->addChild('asunto', htmlspecialchars($asunto));
-    $mensaje->addChild('comentario', htmlspecialchars($comentario));
-
-    // Guarda el XML en el archivo
-    $xml->asXML($xmlFile);
-}
-
-// Uso de la función
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Recolecta los datos del formulario
-    $nombre = $_POST['name'];
-    $email = $_POST['email'];
-    $asunto = $_POST['subject'];
-    $comentario = $_POST['comment'];
-
-    // Guarda el mensaje en el archivo XML
-    guardarMensajeEnXML($nombre, $email, $asunto, $comentario);
-}
-?>
-<script>
-    const form = document.getElementById('contactUs-Form');
-    const msg = document.getElementById('msg');
-
-    form.addEventListener('input', function (event) {
-        const nameLength = document.getElementById('name').value.length;
-        const emailLength = document.getElementById('email').value.length;
-        const subjectLength = document.getElementById('subject').value.length;
-        const commentLength = document.getElementById('comment').value.length;
-
-        msg.textContent = ''; // Limpiar mensaje de alerta
-
-        if (nameLength > 50) {
-            msg.textContent = 'El nombre no puede exceder los 50 caracteres.';
-        } else if (emailLength > 100) {
-            msg.textContent = 'El email no puede exceder los 100 caracteres.';
-        } else if (subjectLength > 100) {
-            msg.textContent = 'El asunto no puede exceder los 100 caracteres.';
-        } else if (commentLength > 500) {
-            msg.textContent = 'El mensaje no puede exceder los 500 caracteres.';
-        }
-    });
-</script>

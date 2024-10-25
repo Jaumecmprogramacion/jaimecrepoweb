@@ -1,61 +1,43 @@
 <?php
-    // Crear el XML con los datos del formulario
-    $rss = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" ?><formulario></formulario>');
-    $rss->addChild('nombre', $_POST['name']);
-    $rss->addChild('email', $_POST['email']);
-    $rss->addChild('asunto', $_POST['subject']);
-    $rss->addChild('mensaje', $_POST['comment']);
 
-    // Especificar la ruta donde se guardará el archivo XML
-    $directory = 'C:\xampp\htdocs\jaimecrespoweb\Contactos\Mensaje_'; // Asegúrate de que esta carpeta existe
+function guardarMensajeEnXML($nombre, $email, $asunto, $comentario) {
+    // Define la ruta del archivo XML
+    $xmlFile = 'mensajes.xml';
 
-   
-	
-
-    // Crear el nombre del archivo basado en la fecha y hora actual
-    $file_name = $directory . date('YmdHis') . '.xml';
-
-    // Guardar el archivo XML
-    if (file_put_contents($file_name, $rss->asXML())) {
-        echo "
-            <style>
-                
-			
-               
-			
-            </style>
-            <p>Enviando<br>Espere unos segundos...</p>
-        ";
+    // Carga el archivo XML o crea uno nuevo si no existe
+    if (file_exists($xmlFile)) {
+        $xml = simplexml_load_file($xmlFile);
     } else {
-        echo "<p>Error al guardar el archivo XML</p>";
+        // Crea un nuevo archivo XML
+        $xml = new SimpleXMLElement('<?xml version="1.0"?><mensajes></mensajes>');
     }
-  // Guardar el archivo en texto
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    // Obtiene el último ID y añade uno para el nuevo mensaje
+    $ultimoId = count($xml->mensaje);
+    $nuevoId = $ultimoId + 1;
+
+    // Crea un nuevo nodo de mensaje
+    $mensaje = $xml->addChild('mensaje');
+    $mensaje->addChild('id', $nuevoId);
+    $mensaje->addChild('fecha', date('Y-m-d')); // Fecha actual en formato YYYY-MM-DD
+    $mensaje->addChild('nombre', htmlspecialchars($nombre));
+    $mensaje->addChild('email', htmlspecialchars($email));
+    $mensaje->addChild('asunto', htmlspecialchars($asunto));
+    $mensaje->addChild('comentario', htmlspecialchars($comentario));
+
+    // Guarda el XML en el archivo
+    $xml->asXML($xmlFile);
+}
+
+// Uso de la función
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Recolecta los datos del formulario
     $nombre = $_POST['name'];
     $email = $_POST['email'];
     $asunto = $_POST['subject'];
-    $mensaje = $_POST['comment'];
-    
+    $comentario = $_POST['comment'];
 
-
-    echo "
-        <style>
-            
-        
-           
-        
-        </style>
-        <p>Enviando<br>Espere unos segundos...</p>
-    ";
-} else {
-    echo "<p>Error al guardar el archivo XML</p>";
+    // Guarda el mensaje en el archivo XML
+    guardarMensajeEnXML($nombre, $email, $asunto, $comentario);
 }
-$archivo = fopen("contactos.txt,"a") or die ("no se pudo guardar el archivo");
-$texto = "$nombre $email $asunto $mensaje";
-fwrite($archivo,$texto);
-fclose($archivo);
-exit();
-
 ?>
-
-<meta http-equiv='Refresh' content="5; url='index.php'" />
