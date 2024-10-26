@@ -70,7 +70,8 @@
                 <div class="text">
                     <h2>Hola mundo!</h>
                     <h1> <span class="typing-text"></span></h1>
-                    <p>Desarrollador web. especializado en ofrecer soluciones web efectivas para diversas organizaciones. Con sólidos conocimientos en programación y bases de datos, enfocado en crear plataformas funcionales y optimizadas.</p>
+                    <p>Desarrollador web. especializado en ofrecer soluciones 
+                         efectivas para diversas organizaciones. Con sólidos conocimientos en programación y bases de datos, enfocado en crear plataformas funcionales y optimizadas.</p>
                     <a href="#about" class="btn">Sobre mi<i class="fas fa-user"></i></a>
                     <a href="#" class="btn" id="copy-email">
                         jaimecrespoprogramacion@gmail.com <i class="fas fa-copy"></i>
@@ -342,7 +343,7 @@
 
                 <div class="info-item">
                     <h4>GitHub:</h4>
-                    <a href="https://github.com/tu-perfil-github" class="btn" target="_blank">
+                    <a href="https://github.com/Jaumecmprogramacion?tab=repositories" class="btn" target="_blank">
                         Github <i class="fab fa-github"></i>
                     </a>
                 </div>

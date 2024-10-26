@@ -1,4 +1,16 @@
 <?php
+session_start();
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.php");
+    exit();
+}
+
+
+
+
+
 // Especificar la ruta del archivo XML
 $directory = 'C:\xampp\htdocs\jaimecrespoweb\Contactos\\';
 $xml_file_name = $directory . 'todos_los_mensajes.xml';
@@ -209,7 +221,7 @@ if (isset($_POST['delete_id'])) {
             <?php foreach ($xml->mensaje as $mensaje): ?>
                 <div class="mensaje-card" id="mensaje-<?php echo htmlspecialchars($mensaje->id); ?>">
                     <input type="checkbox" class="mensaje-checkbox" value="<?php echo htmlspecialchars($mensaje->id); ?>">
-                    <h2><?php echo htmlspecialchars($mensaje->asunto); ?></h2>
+                    <h2><strong>Asunto:</strong><?php echo htmlspecialchars($mensaje->asunto); ?></h2>
                     <p class="nombre"><strong>Nombre:</strong> <?php echo htmlspecialchars($mensaje->nombre); ?></p>
                     <p><strong>Fecha:</strong> <?php echo htmlspecialchars($mensaje->fecha); ?></p>
                     <p><strong>Email:</strong> <?php echo htmlspecialchars($mensaje->email); ?></p>
