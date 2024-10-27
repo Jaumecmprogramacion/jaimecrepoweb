@@ -73,9 +73,11 @@
                     <p>Desarrollador web. especializado en ofrecer soluciones 
                          efectivas para diversas organizaciones. Con sólidos conocimientos en programación y bases de datos, enfocado en crear plataformas funcionales y optimizadas.</p>
                     <a href="#about" class="btn">Sobre mi<i class="fas fa-user"></i></a>
-                    <a href="#" class="btn" id="copy-email">
+                    <a 
+                     class="btn" id="copy-email" onclick="copyEmail(event)">
                         jaimecrespoprogramacion@gmail.com <i class="fas fa-copy"></i>
                     </a>
+                    
                     
                  
                  
