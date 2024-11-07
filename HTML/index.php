@@ -126,22 +126,26 @@
                    
                    while ($fila = $resultado->fetch_assoc()) {
                         echo '
+                        
                         <div class="portfolio-item image '.$fila['clase'].'">
                             <img src="assets/images/Portfolio/'.$fila['img'].'" alt="Portfolio-Image" />
                             <div class="content">
+                                
                                 <h4>'.$fila['nomdes'].'</h4>
                              
                                 <!-- Enlace al repositorio de GitHub con logo -->
                                 <a href="'.$fila['github'].'" target="_blank" class="view-btn no-popup" rel="noopener noreferrer">
                                     <img src="assets/icons/gitm.png" alt="GitHub" style="width: 30px; height: 30px;">
                                 </a>
-                                <!-- Enlace al video de YouTube con logo -->
+                                <!-- Enlace al video de YouTube con logo  -->
+                                
                                 <a href="'.$fila['youtube'].'" target="_blank" class="view-btn no-popup" rel="noopener noreferrer">
                                     <img src="assets/icons/youtube.png" alt="YouTube" style="width: 30px; height: 30px;">
-                                </a>
+                                </a>  
+                                
                                 <!-- Enlace a la web con ícono en lugar de texto -->
                                 <a href="'.$fila['web'].'" target="_blank" class="view-btn no-popup" rel="noopener noreferrer">
-                                    <img src="assets/icons/see.png" style="width: 30px; height: 30px;">
+                                    <img src="assets/icons/enlace.png" style="width: 30px; height: 30px;">
                                 </a>
                             </div>
                         </div>
@@ -375,7 +379,8 @@
         
 
         <div class="content">
-            <p>Creado por <span>Jaime Crespo</span> | all rights reserved</p>
+            <p>Creado por <span>Jaime Crespo</span> | 
+        </p>
         </div>
     </footer>
     <!-------------------- Footer  (End) -------------------->

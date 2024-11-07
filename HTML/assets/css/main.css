@@ -602,6 +602,7 @@ header #menu-btn:hover{
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 1.5rem;
+    
 }
 
 .service-item{
@@ -695,6 +696,8 @@ header #menu-btn:hover{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    margin-right: 20px;
+    
 }
 
 .portfolio-item .content{
@@ -708,7 +711,9 @@ header #menu-btn:hover{
     background-color: rgba(0, 0, 0, 0.8);
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    
+    
+    
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1214,7 +1219,7 @@ footer .content p span{
 
 @keyframes scroll {
     0% {
-        transform: translateX(0); /* Inicio en la posición original */
+        transform: translateX(0); /* Inicio en la posición original */al
     }
     100% {
         transform: translateX(-20%); /* Desplazamiento del 50% para crear efecto continuo */
