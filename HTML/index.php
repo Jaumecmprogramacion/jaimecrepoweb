@@ -220,11 +220,9 @@
             <div class="content">
 
                 <h2>Jaime Crespo</h2>
-                <p> Con una formación que abarca la filosofía, la administración y las finanzas, me encuentro inmerso en el mundo del Desarrollo
-                     de Aplicaciones Multiplataforma (DAM). Fusiono mi pasión por la reflexión filosófica con la aplicación práctica de soluciones
-                      tecnológicas. Mi objetivo es crear aplicaciones innovadoras que integren principios empresariales sólidos y promuevan un impacto
-                       positivo en la sociedad. Estoy comprometido con el aprendizaje continuo y emocionado por las oportunidades que ofrece el mundo digital 
-                       en constante evolución.</p>
+                <p> Con formación en Desarrollo de Aplicaciones Multiplataforma, filosofía, administración y finanzas, me apasiona crear soluciones tecnológicas 
+                    que generen un impacto positivo y real. Mi enfoque combina el pensamiento crítico y principios empresariales, desarrollando aplicaciones que reflejan 
+                    tanto mis valores como mi compromiso profesional. Soy un eterno aprendiz, siempre explorando nuevas ideas para aprovechar el potencial del mundo digital.</p>
    
                 <div class="about-info">
 
