@@ -11,7 +11,8 @@
 
     <!-- Font-Awesome CSS -->
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="assets/vendors/swiper/swiper.css" />
 
@@ -68,7 +69,7 @@
 
             <div class="content">
                 <div class="text">
-                    <h2>Hola mundo!</h>
+                    <h2>Hola mundo!</h2>
                     <h1> <span class="typing-text"></span></h1>
                     <p>Desarrollador web. especializado en ofrecer soluciones 
                          efectivas para diversas organizaciones. Con sólidos conocimientos en programación y bases de datos, enfocado en crear plataformas funcionales y optimizadas.</p>
@@ -291,16 +292,6 @@
                 seguro, accesible y bien estructurado de la información,
                  mejorando la capacidad de respuesta y la integridad de los datos para aplicaciones de cualquier tamaño.</p>
         </div>
-
-        
-        
-
-       
-        
-
-       
-        
-
     </div>
 
 </section>
@@ -330,9 +321,8 @@
                     
                     
                     <h4>Correo:</h4>
-                    <a 
-                     class="btn" id="copy-email" onclick="copyEmail(event)">
-                        jaimecrespoprogramacion@gmail.com <i class="fas fa-copy"></i>
+                    <a class="btn" id="copy-email-contacto" onclick="copyEmail(event)">
+                    jaimecrespoprogramacion@gmail.com <i class="fas fa-copy"></i>
                     </a>
                     
                     
@@ -512,15 +502,28 @@
     </script> 
     <!-- Script para copiar el correo -->
       <script>
-        function copyEmail(event) {
-            event.preventDefault(); // Evita que el enlace navegue
-            const email = "jaimecrespoprogramacion@gmail.com";
-            navigator.clipboard.writeText(email).then(() => {
-                alert("Gracias por ponerte en contacto conmigo a través de: " + email);
-            }).catch(err => {
-                console.error('Error al copiar: ', err);
-            });
-        }
+    function copyEmail(event) {
+    event.preventDefault(); // Evita que el enlace haga su acción por defecto
+
+    const email = event.target.closest('a').textContent.trim(); // Obtener el correo del botón clicado
+    const copyButton = event.target.closest('a');
+
+    // Copia el correo al portapapeles
+    navigator.clipboard.writeText(email).then(() => {
+        // Cambiar el texto del botón a "Correo copiado"
+        copyButton.innerHTML = 'Correo copiado <i class="fas fa-check"></i>';
+        
+        // Opcional: Vuelve al texto original después de 3 segundos
+        setTimeout(() => {
+            copyButton.innerHTML = `${email} <i class="fas fa-copy"></i>`;
+        }, 3000); // Regresa el texto original después de 3 segundos
+    }).catch(err => {
+        console.error('Error al copiar: ', err);
+        alert("No se pudo copiar el correo.");
+    });
+}
+
+
     </script>
    
    
