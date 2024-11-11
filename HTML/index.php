@@ -230,7 +230,7 @@
                     
                         
                         <h4>Idiomas: <span>Español, inglés, valenciano.</span></h4>
-                        <h4>Trabajo: <span>Front/Back-End developer</span></h4>
+                        <h4>Trabajo: <span>Full-stack developer</span></h4>
                         <h4>Situación: <span>Disponible</span></h4>
                         <a href="assets/files/mi_cv.pdf.pdf" class="btn">Descargar CV <i class="fas fa-download"></i></a>
                     </div>
