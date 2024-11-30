@@ -88,7 +88,7 @@
             </div>
     
             <div class="image">
-                <img id="main-image" src="assets/images/Home/01.png" alt="Home-Image">
+                <img id="main-image" src="assets/images/Home/01.jpg" alt="Home-Image">
             </div>
 
             
@@ -185,25 +185,25 @@
             <div class="brands-list">
     <div class="wrapper">
         <!-- Lista de íconos (primera copia) -->
-        <img src="assets/images/habilidades/git.png" alt="Icono 6">
-        <img src="assets/images/habilidades/html.png" alt="Icono 8">
-        <img src="assets/images/habilidades/mongo.png" alt="Icono 9">
-        <img src="assets/images/habilidades/css.png" alt="Icono 1">
-        <img src="assets/images/habilidades/basedatos.png" alt="Icono 2">
-        <img src="assets/images/habilidades/php.png" alt="Icono 3">
-        <img src="assets/images/habilidades/javasc.png" alt="Icono 4">
-        <img src="assets/images/habilidades/oracle1.png" alt="Icono 5">
+        <img src="assets/images/habilidades/git.jpg" alt="Icono 6">
+        <img src="assets/images/habilidades/html.jpg" alt="Icono 8">
+        <img src="assets/images/habilidades/mongo.jpg" alt="Icono 9">
+        <img src="assets/images/habilidades/css.jpg" alt="Icono 1">
+        <img src="assets/images/habilidades/basedatos.jpg" alt="Icono 2">
+        <img src="assets/images/habilidades/php.jpg" alt="Icono 3">
+        <img src="assets/images/habilidades/javasc.jpg" alt="Icono 4">
+        <img src="assets/images/habilidades/oracle1.jpg" alt="Icono 5">
     
        
         <!-- Lista de íconos (segunda copia, duplicado para el efecto infinito) -->
-        <img src="assets/images/img/habilidades/git.png" alt="Icono 6">
-        <img src="assets/images/img/habilidades/html.png" alt="Icono 8">
-        <img src="assets/images/img/habilidades/mongo.png" alt="Icono 9">
-        <img src="assets/images/img/habilidades/css.png" alt="Icono 1">
-        <img src="assets/images/img/habilidades/basedatos.png" alt="Icono 2">
-        <img src="assets/images/img/habilidades/php.png" alt="Icono 3">
-        <img src="assets/images/img/habilidades/javasc.png" alt="Icono 4">
-        <img src="assets/images/img/habilidades/oracle1.png" alt="Icono 5">
+        <img src="assets/images/habilidades/git.jpg" alt="Icono 6">
+        <img src="assets/images/habilidades/html.jpg" alt="Icono 8">
+        <img src="assets/images/habilidades/mongo.jpg" alt="Icono 9">
+        <img src="assets/images/habilidades/css.jpg" alt="Icono 1">
+        <img src="assets/images/habilidades/basedatos.jpg" alt="Icono 2">
+        <img src="assets/images/habilidades/php.jpg" alt="Icono 3">
+        <img src="assets/images/habilidades/javasc.jpg" alt="Icono 4">
+        <img src="assets/images/habilidades/oracle1.jpg" alt="Icono 5">
         
     </div>
 </div>
