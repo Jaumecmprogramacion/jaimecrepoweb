@@ -132,7 +132,7 @@
                 
                 <?php
             
-                $enlace = mysqli_connect("75.102.58.119", "veeogvlq_JCM_RK1984", "Gwbmz42_rk1984", "veeogvlq_webjaime");
+                $enlace = mysqli_connect("*****", "*****", "******", "******");
                 $resultado = mysqli_query($enlace,"SELECT * FROM proyectos");
                    
                    while ($fila = $resultado->fetch_assoc()) {
