@@ -52,14 +52,14 @@ try {
     $mail->isSMTP();
     $mail->Host = 'mail.jaumecrespo.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'jaumecrespo@jaumecrespo.com';
-    $mail->Password = 'Gwbmz42_rk1984'; // Reemplaza con tu contraseña
+    $mail->Username = 'jaumecrespo@jaumecrespo.com'; // Reemplaza con tu correo
+    $mail->Password = '******'; // Reemplaza con tu contraseña
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = 465;
     $mail->Timeout = 30;
 
-    $mail->setFrom('jaumecrespo@jaumecrespo.com', 'Contacto Web');
-    $mail->addAddress('jaumecrespo@jaumecrespo.com', 'Admin');
+    $mail->setFrom('******', 'Contacto Web'); // Reemplaza con tu contraseña
+    $mail->addAddress('******', 'Admin'); // Reemplaza con tu contraseña
 
     $mail->isHTML(true);
     $mail->Subject = $subject;
