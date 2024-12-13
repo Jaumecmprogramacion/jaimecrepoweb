@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title -->
-    <title>Jaime Crespo | Personal Web</title>
+    <title>Jaume Crespo | Personal Web</title>
 
     <!-- Font-Awesome CSS -->
     <link rel="stylesheet" href="assets/vendors/font-awesome/css/all.min.css" />
@@ -22,6 +22,14 @@
     <!-- Custom Stylesheets -->
     <link rel="stylesheet"  href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Icono favicon -->
+      <link rel="icon" href="assets/images/Home/03.jpg" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soy programador freelance especializado en desarrollo web a medida. Trabajo con tecnologías modernas para ofrecer soluciones innovadoras.">
+    <meta name="keywords" content="programador web, desarrollador freelance, desarrollo web, JavaScript, PHP, Valencia, soluciones digitales">
+    <meta name="robots" content="index, follow">
+
+    <title>Mi página web</title>
    
     
         
@@ -42,7 +50,7 @@
 
         <!-- Logo -->
         <a class="logo" href="#home">
-            <h2> Jaime Crespo </h2> 
+            <h2> Jaume Crespo </h2> 
           <!--<img src="assets/images/img/logo01.jpg" alt="logo" /> -->
         </a>
         <!-- Logo End -->
@@ -78,7 +86,7 @@
                     <a href="#about" class="btn">Sobre mi<i class="fas fa-user"></i></a>
                     <a 
                      class="btn" id="copy-email" onclick="copyEmail(event)">
-                        jaimecrespoprogramacion@gmail.com <i class="fas fa-copy"></i>
+                        jaumecrespo@jaumecrespo.com <i class="fas fa-copy"></i>
                     </a>
                     
                     
@@ -124,7 +132,7 @@
                 
                 <?php
             
-                $enlace = mysqli_connect("****", "*****", "*****", "*******");
+                $enlace = mysqli_connect("75.102.58.119", "veeogvlq_JCM_RK1984", "Gwbmz42_rk1984", "veeogvlq_webjaime");
                 $resultado = mysqli_query($enlace,"SELECT * FROM proyectos");
                    
                    while ($fila = $resultado->fetch_assoc()) {
@@ -324,7 +332,7 @@
                     
                     <h4>Correo:</h4>
                     <a class="btn" id="copy-email-contacto" onclick="copyEmail(event)">
-                    jaimecrespoprogramacion@gmail.com <i class="fas fa-copy"></i>
+                    jaumecrespo@jaumecrespo.com <i class="fas fa-copy"></i>
                     </a>
                     
                     
@@ -339,7 +347,7 @@
 
                 <div class="info-item">
                     <h4>GitHub:</h4>
-                    <a href="https://github.com/Jaumecmprogramacion?tab=repositories" class="btn" target="_blank">
+                    <a href="https://github.com/Jaumecmprogramacion" class="btn" target="_blank">
                         Github <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -369,7 +377,7 @@
         
 
         <div class="content">
-            <p>Creado por <span>Jaime Crespo</span> | 
+            <p>Creado por <span>Jaume Crespo</span> | 
         </p>
         </div>
     </footer>
@@ -421,7 +429,7 @@
               data:jQuery('#contactUs-Form').serialize(),
               success:function(result){
                   jQuery('#msg').html(result);
-                  jQuery('#submit').html('Submit');
+                  jQuery('#submit').html('Enviado');
                   jQuery('#submit').attr('disabled',false);
                   jQuery('#contactUs-Form')[0].reset();
               }

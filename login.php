@@ -13,8 +13,8 @@ if (isset($_POST['submit'])) {
     $password = isset($_POST['password']) ? $_POST['password'] : '';
 
     // Definir las credenciales correctas de inicio de sesión
-    $correct_username = '******';
-    $correct_password = '*****';
+    $correct_username = 'jcm';
+    $correct_password = 'jcm';
 
     // Comparar las credenciales ingresadas con las correctas
     if ($username === $correct_username && $password === $correct_password) {
