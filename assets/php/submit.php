@@ -6,7 +6,8 @@ $subject = isset($_POST['subject']) ? htmlspecialchars(trim($_POST['subject'])) 
 $comment = isset($_POST['comment']) ? htmlspecialchars(trim($_POST['comment'])) : 'Mensaje no proporcionado';
 
 // Especificar la ruta donde se guardarán los archivos TXT y XML
-$directory = 'C:\xampp\htdocs\jaimecrespoweb\Contactos\\'; // Asegúrate de que esta carpeta existe
+$directory = $_SERVER['DOCUMENT_ROOT'] . '/Contactos/'; // Obtiene el directorio raíz absoluto
+
 
 // Verificar si la carpeta existe, si no, intentar crearla
 if (!is_dir($directory)) {

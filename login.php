@@ -1,5 +1,10 @@
-
 <?php
+// Activar la visualización de errores para depurar
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Iniciar la sesión al principio del archivo, sin espacio antes del PHP
 session_start();
 
 if (isset($_POST['submit'])) {
@@ -8,14 +13,15 @@ if (isset($_POST['submit'])) {
     $password = isset($_POST['password']) ? $_POST['password'] : '';
 
     // Definir las credenciales correctas de inicio de sesión
-    $correct_username = 'jcm';
-    $correct_password = 'Rk1984_rk1984';
+    $correct_username = '******';
+    $correct_password = '*****';
 
     // Comparar las credenciales ingresadas con las correctas
     if ($username === $correct_username && $password === $correct_password) {
         $_SESSION['loggedin'] = true;
+        // Redirigir primero
         header("Location: ver_mensajes.php");
-        exit();
+        exit();  // Asegúrate de que el script se detenga aquí para evitar que se ejecute el código después de la redirección
     } else {
         $error = "Usuario o contraseña incorrectos";
     }

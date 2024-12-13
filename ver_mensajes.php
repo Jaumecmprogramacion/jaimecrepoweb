@@ -12,7 +12,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 
 // Especificar la ruta del archivo XML
-$directory = 'C:\xampp\htdocs\jaimecrespoweb\Contactos\\';
+$directory = $_SERVER['DOCUMENT_ROOT'] . '/Contactos/';
 $xml_file_name = $directory . 'todos_los_mensajes.xml';
 
 // Función para cargar mensajes desde el archivo XML

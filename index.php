@@ -124,7 +124,7 @@
                 
                 <?php
             
-                $enlace = mysqli_connect("localhost", "jcm1984", "Gwbmz42_42", "webjaimecm");
+                $enlace = mysqli_connect("****", "*****", "*****", "*******");
                 $resultado = mysqli_query($enlace,"SELECT * FROM proyectos");
                    
                    while ($fila = $resultado->fetch_assoc()) {
